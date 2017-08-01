@@ -5,29 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>My App</title>
+    <title>VK</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.ios.min.css">
     <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
   </head>
-  <body>
+  <body class="layout-dark theme-red">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
-      <div class="content-block">
-        <p>Left panel content goes here</p>
-      </div>
-    </div>
-    <!-- Right panel with cover effect-->
-    <div class="panel panel-right panel-cover">
-      <div class="content-block">
-        <p>Right panel content goes here</p>
-      </div>
+     <!-- List of tabs -->
+     <div class="list-block">
+      <ul>
+        <!-- Search bar -->
+        <!-- <li>
+          <div class="page">
+            <form action="" class="searchbar">
+              <div class="searchbar-input">
+                <input type="search" placeholder="Search">
+                <a href="#" class="searchbar-clear"></a>
+              </div>
+              <a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+          </div>
+        </li> -->
+        <!-- Profile -->
+        <li>
+          <a href="profile.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Profile</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- News -->
+        <li>
+          <a href="news.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">News</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Messages -->
+        <li>
+          <a href="messages.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Messages</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Friends -->
+        <li>
+          <a href="friends.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Friends</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Communities -->
+        <li>
+          <a href="communities.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Communities</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Photos -->
+        <li>
+          <a href="photos.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Photos</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Videos -->
+        <li>
+          <a href="videos.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Videos</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Music -->
+        <li>
+          <a href="music.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Music</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Bookmarks -->
+        <li>
+          <a href="bookmarks.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Bookmarks</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <!-- Settings -->
+        <li>
+          <a href="settigns.html" class="item-link">
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon my-icon"></i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Settings</div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>        
+     </div>
     </div>
     <!-- Views-->
     <div class="views">
@@ -36,19 +195,29 @@
         <!-- Top Navbar-->
         <div class="navbar">
           <div class="navbar-inner">
-            <!-- We have home navbar without left link-->
-            <div class="center sliding">Awesome App</div>
+            <div class="left">
+             <!-- Left panel bars icon -->
+              <a href="#" data-panel="left" class="link icon-only open-panel">
+                <i class="icon f7-icons">bars</i>
+              </a>
+            </div>
+            <!-- Current page title -->
+            <div class="center sliding">News</div>
+            <!-- Search icon -->
             <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+              <a href="#" class="link icon-only">
+                <i class="icon f7-icons">search</i>
+              </a>
             </div>
           </div>
         </div>
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-through toolbar-through">
+        <div class="pages navbar-through">
           <!-- Page, data-page contains page name-->
           <div data-page="index" class="page">
             <!-- Scrollable page content-->
-            <div class="page-content">
+            <div class="page-content hide-bars-on-scroll">
+            
               <div class="content-block-title">Welcome To My Awesome App</div>
               <div class="content-block">
                 <div class="content-block-inner">
@@ -56,42 +225,49 @@
                   <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
                 </div>
               </div>
-              <div class="content-block-title">What about simple navigation?</div>
-              <div class="list-block">
-                <ul>
-                  <li><a href="about.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner"> 
-                          <div class="item-title">About</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="services.html" class="item-link">
-                      <div class="item-content"> 
-                        <div class="item-inner">
-                          <div class="item-title">Services</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="form.html" class="item-link">
-                      <div class="item-content"> 
-                        <div class="item-inner">
-                          <div class="item-title">Form</div>
-                        </div>
-                      </div></a></li>
-                </ul>
-              </div>
-              <div class="content-block-title">Side panels</div>
+              
+              <div class="content-block-title">Welcome To My Awesome App</div>
               <div class="content-block">
-                <div class="row">
-                  <div class="col-50"><a href="#" data-panel="left" class="button open-panel">Left Panel</a></div>
-                  <div class="col-50"><a href="#" data-panel="right" class="button open-panel">Right Panel</a></div>
+                <div class="content-block-inner">
+                  <p>Couple of worlds here because my app is so awesome!</p>
+                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
                 </div>
               </div>
+              
+              <div class="content-block-title">Welcome To My Awesome App</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p>Couple of worlds here because my app is so awesome!</p>
+                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+                </div>
+              </div>
+              
+              <div class="content-block-title">Welcome To My Awesome App</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p>Couple of worlds here because my app is so awesome!</p>
+                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+                </div>
+              </div>
+              
+              <div class="content-block-title">Welcome To My Awesome App</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p>Couple of worlds here because my app is so awesome!</p>
+                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+                </div>
+              </div>
+              
+              <div class="content-block-title">Welcome To My Awesome App</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p>Couple of worlds here because my app is so awesome!</p>
+                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+                </div>
+              </div>
+                            
             </div>
           </div>
-        </div>
-        <!-- Bottom Toolbar-->
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
         </div>
       </div>
     </div>

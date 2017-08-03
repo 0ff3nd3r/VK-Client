@@ -21,6 +21,7 @@ var mainView = myApp.addView('.view-main', {
 // });
 
 centerElements();
+// resizeFirstRow();
 // fitWidth();
 
 // Generate dynamic page
@@ -52,14 +53,41 @@ function createContentPage() {
 	return;
 }
 
+// Locates elements at the vertical center of the parent block
 function centerElements() {
   var elements = $('.v-centered');
   for (var i = 0; i < elements.length; i++) {
     var element = $(elements[i]);
-    var parentHeight = element.parent().height();
+    var parentHeight = element.parent().innerHeight();
     element.css('margin', '' + (parentHeight - element.outerHeight()) / 2 + 'px 0');
   }
   return;
+}
+
+// Finds first rows with 1-2 cards and resizes the photos so that they have equal 
+// height and fit the width of the card
+// @param rows Array
+// Needs fix
+// Currently it just distorts the picture
+// Realization should probably crop the image
+function resizeFirstRow(rows) {
+  // Find rows with 1-2 photos
+  rows = rows || $('.one-row .row-one');
+  
+  for (var i = 0; i < rows.length; i++) {
+    // Find block with images
+    var images = $(rows[i]).find('img');
+    // There could be only two possibilities
+    // We need only rows with two photos
+    if (images.length == 2) {
+      // Find height difference
+      var heightDiff = Math.abs($(images[0]).height() - $(images[1]).height());
+      // Correct height
+      $(images[0]).height() > $(images[1]).height() ?
+        $(images[0]).height($(images[0]).height() - heightDiff) :
+        $(images[1]).height($(images[1]).height() - heightDiff);
+    }
+  }
 }
 
 // Finds a row with two photos and resizes the photos to fit the width of the card 

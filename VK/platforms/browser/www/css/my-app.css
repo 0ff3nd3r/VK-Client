@@ -6,10 +6,6 @@
   padding: 0 !important;
 }
 
-/*.panel {
-  margin: 0 !important;
-  padding: 0 !important;
-}*/
 #title {
   margin: 0 6px;
 }
@@ -86,7 +82,7 @@
   height: 100%;
 }
 
-/*For cards with only two photos*/
+/*For rows with only two photos*/
 
 
 /*Optimal size for the card with the photo*/
@@ -108,6 +104,29 @@
 .photos-container > .container-fluid > .row-one > .photo-2 {
   padding: 0;
   padding-left: 0.5px;
+}
+
+.photos-container.mult-rows .row-one {
+  height: 75%;
+}
+
+.photos-container.mult-rows .row-two,
+.photos-container.mult-rows .row-three {
+  height: 25%;
+  padding: 0;
+  padding-top: 1px; 
+}
+
+.photos-container.mult-rows .photo-col {
+  padding: 0 0.5px 0;
+}
+
+.photos-container.mult-rows .photo-col.first {
+  padding-left: 0;
+}
+
+.photos-container.mult-rows .photo-col.last {
+  padding-right: 0;
 }
 
 .row {

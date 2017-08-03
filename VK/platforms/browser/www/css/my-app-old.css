@@ -1,6 +1,3 @@
-/*Notes:*/
-/*display: flex does not work properly*/
-
 .list-block {
   margin: 0 !important;
   padding: 0 !important;
@@ -85,33 +82,18 @@
   width: 100%;
   height: 100%;
 }
-
-/*For cards with only two photos*/
-
-
-/*Optimal size for the card with the photo*/
-/*.news-card-item-photo {
-  height: 492px;
+/*
+.photos-container > .container-fluid {
+  height: 438px;
 }*/
 
-/*.news-card-item-photo .mult-photos.one-row .row-one,
-.news-card-item-photo .mult-photos.one-row .row-one img {
-  height: 375px;
-}
-*/
 /*Change to negative paddings of the parent container*/
 .photos-container > .container-fluid > .row-one > .photo-1 {
-  padding: 0;
-  padding-right: 0.5px;
+  padding-left: 0;
+  padding-right: 2px;
 }
 
 .photos-container > .container-fluid > .row-one > .photo-2 {
-  padding: 0;
-  padding-left: 0.5px;
-}
-
-.row {
-  display: block;/*
-  margin: 0;
-  padding: 0;*/
+  padding-left: 2px;
+  padding-right: 0;
 }

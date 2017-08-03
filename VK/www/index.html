@@ -7,20 +7,26 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>VK</title>
     <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/framework7.ios.min.css">
     <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
     <link rel="stylesheet" href="css/framework7-icons.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
   </head>
-  <body class="layout-dark theme-red">
+  <!-- <body class="layout-dark theme-red"> -->
+  <body class="theme-red">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
-     <!-- List of tabs -->
+    <!-- List of tabs -->
      <div class="list-block">
       <ul>
         <!-- Search bar -->
@@ -37,153 +43,133 @@
         </li> -->
         <!-- Profile -->
         <li>
-          <a href="profile.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">person</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Profile</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- News -->
         <li>
-          <a href="news.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">home</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">News</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Messages -->
         <li>
-          <a href="messages.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">chat</i> <!-- email -->
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Messages</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Friends -->
         <li>
-          <a href="friends.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">persons</i> <!-- persons_fill -->
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Friends</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Communities -->
         <li>
-          <a href="communities.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">world</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Communities</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Photos -->
         <li>
-          <a href="photos.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">images</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Photos</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Videos -->
         <li>
-          <a href="videos.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">film</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Videos</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Music -->
         <li>
-          <a href="music.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">tune</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Music</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Bookmarks -->
         <li>
-          <a href="bookmarks.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">heart</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Bookmarks</div>
               </div>
             </div>
-          </a>
         </li>
         <!-- Settings -->
         <li>
-          <a href="settigns.html" class="item-link">
             <div class="item-content">
             
               <div class="item-media">
-                <i class="icon my-icon"></i>
+                <i class="icon f7-icons">settings</i>
               </div>
             
               <div class="item-inner"> 
                 <div class="item-title">Settings</div>
               </div>
             </div>
-          </a>
         </li>
       </ul>        
      </div>
@@ -202,7 +188,10 @@
               </a>
             </div>
             <!-- Current page title -->
-            <div class="center sliding">News</div>
+            <div class="center sliding">
+              <span id="title">News</span>
+              <span><i class="icon f7-icons">reload</i></span>
+            </div>
             <!-- Search icon -->
             <div class="right">
               <a href="#" class="link icon-only">
@@ -218,52 +207,167 @@
             <!-- Scrollable page content-->
             <div class="page-content hide-bars-on-scroll">
             
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                </div>
-              </div>
-              
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                </div>
-              </div>
-              
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                </div>
-              </div>
-              
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                </div>
-              </div>
-              
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                </div>
-              </div>
-              
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                </div>
+              <div class="list-block cards-list">
+                <ul>
+                
+                  <li class="card">
+                    <div class="card-header">Card Header</div>
+                    <div class="card-content">
+                      <div class="card-content-inner">Card content</div>
+                    </div>
+                    <div class="card-footer">Card footer</div>
+                  </li>
+                  
+                  <!-- Card with three to six photos -->
+                  <li class="card news-card-item news-card-item-photo">
+                    <div class="card-header no-border">
+                      <div class="news-card-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <span class="news-card-name">John Doe<br></span>
+                        <span class="news-card-date">Monday at 3:47 PM</span>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="news-card-content-photos photos-container mult-rows">
+                        <!-- Create a grid -->
+                        <div class="container-fluid">
+                          <!-- First row with first two photos -->
+                          <div class="row row-one">
+                            <div class="col-xs-6 photo-1">
+                              <img src="img/i-f7-material.png" width="100%">
+                            </div>
+                            <div class="col-xs-6 photo-2">
+                              <img src="img/images-13.jpg" width="100%">
+                            </div>
+                          </div>
+                          <!-- Second row with next four photos -->
+                          <div class="row row-two">
+                            <div class="col-xs-12 photo-1">
+                              <img src="img/i-f7-material.png" width="100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer no-border news-card-social-buttons">
+                      <a href="#" class="link"><i class="icon f7-icons">heart</i>400</a>
+                      <a href="#" class="link"><i class="icon f7-icons">chats</i>100</a>
+                      <a href="#" class="link"><i class="icon f7-icons">radio</i>300</a>
+                    </div>
+                  </li>
+                  
+                  <!-- Card with two photos -->
+                  <li class="card news-card-item news-card-item-photo">
+                    <div class="card-header no-border">
+                      <div class="news-card-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <span class="news-card-name">John Doe<br></span>
+                        <span class="news-card-date">Monday at 3:47 PM</span>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="news-card-content-photos photos-container mult-photos one-row">
+                        <!-- Create a grid with two columns of equal width -->
+                        <div class="container-fluid">
+                          <div class="row row-one">
+                            <div class="col-xs-6 photo-1">
+                              <img src="img/i-f7-material.png" width="100%">
+                            </div>
+                            <div class="col-xs-6 photo-2 v-centered">
+                              <img src="img/images-13.jpg" width="100%">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer no-border news-card-social-buttons">
+                      <a href="#" class="link"><i class="icon f7-icons">heart</i>400</a>
+                      <a href="#" class="link"><i class="icon f7-icons">chats</i>100</a>
+                      <a href="#" class="link"><i class="icon f7-icons">radio</i>300</a>
+                    </div>
+                  </li>
+                  
+                  <!-- Card with one photo and text -->
+                  <li class="card">
+                    <div class="card-header no-border">
+                      <div class="news-card-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <span class="news-card-name">John Doe<br></span>
+                        <span class="news-card-date">Monday at 3:47 PM</span>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-inner">
+                        <div class="news-card-content-text">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis fugiat perspiciatis ipsa excepturi minus magni, facilis, harum deleniti, amet libero maiores autem. Quis dicta eum doloribus, consequatur modi assumenda quaerat.
+                        </div>
+                      </div>
+                      <div class="news-card-content-photo">
+                        <img src="img/i-f7-material.png" width="100%">
+                      </div>
+                    </div>
+                    <div class="card-footer no-border news-card-social-buttons">
+                      <a href="#" class="link"><i class="icon f7-icons">heart</i>400</a>
+                      <a href="#" class="link"><i class="icon f7-icons">chats</i>100</a>
+                      <a href="#" class="link"><i class="icon f7-icons">radio</i>300</a>
+                    </div>
+                  </li>
+                  
+                  <!-- Card with text -->
+                  <li class="card news-card-item news-card-item-text">
+                    <div class="card-header no-border">
+                      <div class="news-card-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <span class="news-card-name">John Doe<br></span>
+                        <span class="news-card-date">Monday at 3:47 PM</span>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-inner">
+                        <div class="news-card-content-text">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis fugiat perspiciatis ipsa excepturi minus magni, facilis, harum deleniti, amet libero maiores autem. Quis dicta eum doloribus, consequatur modi assumenda quaerat.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer no-border news-card-social-buttons">
+                      <a href="#" class="link"><i class="icon f7-icons">heart</i>400</a>
+                      <a href="#" class="link"><i class="icon f7-icons">chats</i>100</a>
+                      <a href="#" class="link"><i class="icon f7-icons">radio</i>300</a>
+                    </div>
+                  </li>
+                  
+                  <!-- Card with one photo -->
+                  <li class="card news-card-item news-card-item-photo">
+                    <div class="card-header no-border">
+                      <div class="news-card-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <span class="news-card-name">John Doe<br></span>
+                        <span class="news-card-date">Monday at 3:47 PM</span>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="news-card-content-photo">
+                        <img src="img/i-f7-material.png" width="100%">
+                      </div>
+                    </div>
+                    <div class="card-footer no-border news-card-social-buttons">
+                      <a href="#" class="link"><i class="icon f7-icons">heart</i>400</a>
+                      <a href="#" class="link"><i class="icon f7-icons">chats</i>100</a>
+                      <a href="#" class="link"><i class="icon f7-icons">radio</i>300</a>
+                    </div>
+                  </li>
+                  
+                </ul>
               </div>
                             
             </div>
@@ -271,8 +375,7 @@
         </div>
       </div>
     </div>
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/framework7.min.js"></script>
+
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
   </body>

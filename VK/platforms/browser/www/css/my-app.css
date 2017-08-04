@@ -134,3 +134,41 @@
   margin: 0;
   padding: 0;*/
 }
+
+/*Music settings*/
+.news-card-item-music .content-music .list-block ul {
+  padding-left: 0;
+}
+
+.news-card-item-music .content-music .icon {
+  font-size: 38px;
+  font-weight: 200;
+}
+
+.news-card-item-music .content-music .artist,
+.news-card-item-music .content-music .title {
+  display: block;
+}
+
+/*Remove gray line-divider*/
+.news-card-item-music .content-music .list-block .item-inner:after,
+.news-card-item-music .content-music .list-block li li:last-child .item-inner:after,
+.news-card-item-music .content-music .list-block li:last-child li .item-inner:after {
+  content: none;
+}
+
+.news-card-item-music .content-music .artist {
+  margin: 3px 3px 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.news-card-item-music .content-music .title {
+  margin: 0 2px;
+  font-size: 13px;
+  color: #8e8e93;
+}
+
+.news-card-item-music .content-music .duration {
+  font-size: 13px;
+}

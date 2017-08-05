@@ -14,6 +14,10 @@
   background-color: white;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 /*.statusbar-overlay {
   background-color: rgba(51, 51, 51, 1);
 }*/
@@ -42,6 +46,65 @@
 
 .news-card-item .card-header .row >[class*=col-] {
   padding: 0;
+}
+
+.news-card-content-link,
+.news-card-content-attachment {
+  padding: 5px 15px;
+}
+
+.news-card-item .news-card-content-link i {
+  font-size:  34px;
+  -webkit-transform: rotate(45deg);
+}
+
+.news-card-item .news-card-content-attachment i {
+  font-size: 34px;
+}
+
+.news-card-item .news-card-content-attachment .attachment-info-separator i {
+  color: #8e8e93;
+  font-size: 3px;
+}
+
+.news-card-item .news-card-content-link .link-info-wrapper,
+.news-card-item .news-card-content-link .link-wrapper,
+.news-card-item .news-card-content-attachment .attachment-wrapper {
+  margin: 3px;
+}
+
+.news-card-item .news-card-content-attachment .attachment-wrapper {
+  padding-left: 4px;
+}
+
+.news-card-item .news-card-content-link .link-icon-wrapper,
+.news-card-item .news-card-content-attachment .attachment-icon-wrapper {
+  float: left;
+  margin-right: 4px;
+}
+
+.news-card-item .news-card-content-attachment .attachment-icon-wrapper {
+  margin-right: 8.891px;
+}
+
+.news-card-item .news-card-content-attachment .attachment-icon-wrapper {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.news-card-item .news-card-content-link .link-title,
+.news-card-item .news-card-content-attachment .attachment-title {
+  margin: 3px 3px 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.news-card-item .news-card-content-link .link-domain,
+.news-card-item .news-card-content-attachment .attachment-size,
+.news-card-item .news-card-content-attachment .attachment-date {
+  margin: 0 3px;
+  font-size: 13px;
+  color: #8e8e93;
 }
 
 .news-card-avatar {

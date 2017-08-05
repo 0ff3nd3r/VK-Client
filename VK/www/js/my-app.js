@@ -59,7 +59,8 @@ function centerElements() {
   for (var i = 0; i < elements.length; i++) {
     var element = $(elements[i]);
     var parentHeight = element.parent().innerHeight();
-    element.css('margin', '' + (parentHeight - element.outerHeight()) / 2 + 'px 0');
+    element.css('margin-top', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
+    element.css('margin-bottom', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
   }
   return;
 }

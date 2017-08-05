@@ -41,11 +41,7 @@
 
 .news-card-item .card-header .info-wrapper {
   height: 50px;
-  width: 83%;
-}
-
-.news-card-item .card-header .row >[class*=col-] {
-  padding: 0;
+  width: 90%;
 }
 
 .news-card-content-link,
@@ -102,6 +98,12 @@
   margin-bottom: 3px;
 }
 
+.news-card-item .news-card-content-repost .repost-icon-wrapper i {
+  font-size: 20px;
+  margin-top: -4.72px;
+  /*margin-top: -2.36px;*/
+}
+
 .news-card-item .news-card-content-link .link-title,
 .news-card-item .news-card-content-attachment .attachment-title {
   margin: 3px 3px 0;
@@ -144,6 +146,35 @@
   margin: 6px;
   font-size: 13px;
   color: #8e8e93;
+}
+
+.news-card-content-repost .card-header {
+  height: 40px;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.news-card-content-repost .card-header .news-card-name {
+  font-size: 15px;
+  margin: 2px;
+}
+
+.news-card-content-repost .card-header .news-card-date {
+  font-size: 12px;
+}
+
+.news-card-content-repost .card-header .info-wrapper {
+  width: 97%;
+  height: 40px;
+}
+
+.news-card-content-repost .card-header .news-card-avatar {
+  height: 40px;
+}
+
+.news-card-content-repost .card-header .news-card-avatar > img {
+  width: 40px;
+  height: 40px;
 }
 
 .news-card-social-buttons > a {

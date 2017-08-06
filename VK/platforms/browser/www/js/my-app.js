@@ -15,7 +15,8 @@ var mainView = myApp.addView('.view-main', {
 // mainView.onPageInit();
 
 $('.news-cards-list .card.news-card-item').on('click', function() {
-  mainView.router.loadPage('page-full-post-test.html');
+  mainView.router.loadPage('page-full-post_release.html');
+  centerElements();
 });
 // Add view. Messages tab
 // var messaagesView = myApp.addView('.view-messages', {
@@ -75,13 +76,13 @@ function centerElements() {
     element.css('margin-bottom', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
   }
   
-  elements = $('.h-centered');
-  for (var i = 0; i < elements.length; i++) {
-    var element = $(elements[i]);
-    var parentWidth = element.parent().innerWidth();
-    element.css('margin-left', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
-    element.css('margin-right', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
-  }
+  // elements = $('.h-centered');
+  // for (var i = 0; i < elements.length; i++) {
+  //   var element = $(elements[i]);
+  //   var parentWidth = element.parent().innerWidth();
+  //   element.css('margin-left', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
+  //   element.css('margin-right', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
+  // }
   
   return;
 }

@@ -12,12 +12,24 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-// mainView.onPageInit();
+// mainView.loadPage("views/News/page-news-feed-news_release.html");
 
-$('.news-cards-list .card.news-card-item').on('click', function() {
-  mainView.router.loadPage('page-full-post_release.html');
-  centerElements();
+// // Make News tab active
+// // mainView.onPageInit();
+
+// $$('.news-cards-list .card.news-card-item').on('click', function() {
+//   mainView.router.loadPage('views/News/page-full-post_release.html');
+//   centerElements();
+// });
+
+// mainView.loadPage("inde")
+var messagesSearchbar = myApp.searchbar('.searchbar', {
+  overlay: ".searchbar-overlay",
 });
+$(".searchbar-clear").on('click', function () {
+  $(".searchbar-input input").val('');
+});
+
 // Add view. Messages tab
 // var messaagesView = myApp.addView('.view-messages', {
 //     // Because we use fixed-through navbar we can enable dynamic navbar

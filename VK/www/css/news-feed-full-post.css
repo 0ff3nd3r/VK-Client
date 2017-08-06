@@ -1,0 +1,88 @@
+.navbar div.right {
+  margin-left: 0;
+  display: block !important;
+  position: relative;
+  float: left;
+}
+
+.navbar.navbar-full-post .options-wrapper {
+  margin-right: 15px;
+}
+
+.navbar.navbar-full-post .center {
+  margin-left: -32.5px;
+}
+
+.news-card-content-comment {
+  margin: 0 0 1px;
+}
+
+.news-card-content-comment .news-card-comment-avatar {
+  float: left;
+  width: 35px;
+  height: 35px;
+}
+
+.news-card-content-comment .news-card-comment-avatar > img {
+  width: 35px;
+  height: 35px;
+}
+
+.news-card-content-comment .card-header .info-wrapper {
+  width: 88%;
+}
+
+.news-card-content-comment .info-wrapper .news-card-comment-name {
+  font-size: 17px;
+}
+
+.news-card-content-comment .card-content .card-content-inner {
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+
+.news-card-content-comment .news-card-comment-text {
+  margin-bottom: 4px;
+}
+
+.news-card-content-comment .news-card-comment-photos {
+  padding: 0 15px;
+}
+
+.news-card-content-comment .photos-container.mult-rows .row-one {
+  height: 75%;
+}
+
+.news-card-content-comment .photos-container.mult-rows .row-one,
+.news-card-content-comment .photos-container.mult-rows .row-two,
+.news-card-content-comment .photos-container.mult-rows .row-three {
+  height: 25%;
+  padding: 0;
+  padding-top: 1px;
+}
+
+.news-card-content-comment .news-card-content-attachment,
+.news-card-content-comment .news-card-content-link {
+  margin-top: 3px;
+  padding: 0;
+}
+
+.news-card-content-comment .news-card-content-attachment i,
+.news-card-content-comment .news-card-content-link i {
+  font-size: 28px;
+}
+
+.news-card-content-comment .news-card-content-attachment .attachment-title,
+.news-card-content-comment .news-card-content-link .link-title {
+  font-size: 13px;
+}
+
+.news-card-content-comment .news-card-content-attachment .attachment-date,
+.news-card-content-comment .news-card-content-attachment .attachment-size,
+.news-card-content-comment .news-card-content-link .link-domain {
+  font-size: 11px;
+}
+
+.news-card-content-comment .news-card-content-link .attachment-info-separator i {
+  font-size: 1.5px;
+}

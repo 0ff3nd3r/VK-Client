@@ -6,11 +6,23 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-// Add view
+// Add main view. News tab
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
     dynamicNavbar: true
 });
+
+// mainView.onPageInit();
+
+$('.news-cards-list .card.news-card-item').on('click', function() {
+  mainView.router.loadPage('page-full-post-test.html');
+});
+// Add view. Messages tab
+// var messaagesView = myApp.addView('.view-messages', {
+//     // Because we use fixed-through navbar we can enable dynamic navbar
+//     dynamicNavbar: true,
+//     name: 'messages'
+// });
 
 // Callbacks to run specific code for specific pages, for example for About page:
 // myApp.onPageInit('about', function (page) {
@@ -62,6 +74,15 @@ function centerElements() {
     element.css('margin-top', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
     element.css('margin-bottom', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
   }
+  
+  elements = $('.h-centered');
+  for (var i = 0; i < elements.length; i++) {
+    var element = $(elements[i]);
+    var parentWidth = element.parent().innerWidth();
+    element.css('margin-left', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
+    element.css('margin-right', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
+  }
+  
   return;
 }
 

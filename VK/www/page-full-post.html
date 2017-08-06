@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>VK</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+    <!-- Path to custom app styles-->
+    <link rel="stylesheet" href="css/news-feed.css">
+    <link rel="stylesheet" href="css/news-feed-full-post.css">
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+  <!-- <body class="layout-dark theme-red"> -->
+  <body class="theme-red">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+    <!-- List of tabs -->
+     <div class="list-block">
+      <ul>
+        <!-- Search bar -->
+        <!-- <li>
+          <div class="page">
+            <form action="" class="searchbar">
+              <div class="searchbar-input">
+                <input type="search" placeholder="Search">
+                <a href="#" class="searchbar-clear"></a>
+              </div>
+              <a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+          </div>
+        </li> -->
+        <!-- Profile -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">person</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Profile</div>
+              </div>
+            </div>
+        </li>
+        <!-- News -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">home</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">News</div>
+              </div>
+            </div>
+        </li>
+        <!-- Messages -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">chat</i> <!-- email -->
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Messages</div>
+              </div>
+            </div>
+        </li>
+        <!-- Friends -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">persons</i> <!-- persons_fill -->
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Friends</div>
+              </div>
+            </div>
+        </li>
+        <!-- Communities -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">world</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Communities</div>
+              </div>
+            </div>
+        </li>
+        <!-- Photos -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">images</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Photos</div>
+              </div>
+            </div>
+        </li>
+        <!-- Videos -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">film</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Videos</div>
+              </div>
+            </div>
+        </li>
+        <!-- Music -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">tune</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Music</div>
+              </div>
+            </div>
+        </li>
+        <!-- Bookmarks -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">heart</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Bookmarks</div>
+              </div>
+            </div>
+        </li>
+        <!-- Settings -->
+        <li>
+            <div class="item-content">
+            
+              <div class="item-media">
+                <i class="icon f7-icons">settings</i>
+              </div>
+            
+              <div class="item-inner"> 
+                <div class="item-title">Settings</div>
+              </div>
+            </div>
+        </li>
+      </ul>        
+     </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main view-news-feed">
+        <!-- Top Navbar-->
+        <div class="navbar navbar-full-post">
+          <div class="navbar-inner">
+            <div class="left">
+              <!-- Back to the previous page -->
+              <a href="#" class="link back">
+                <i class="icon f7-icons">chevron_left</i>
+                <span>News</span>
+              </a>
+            </div>
+            <!-- Current page title -->
+            <div class="center sliding">
+              <span id="title">Post</span>
+            </div>
+            <!-- Search icon -->
+            <div class="right">
+              <div class="options-wrapper">
+                <span><i class="icon f7-icons">more_vertical</i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through">
+        
+        
+        
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content hide-bars-on-scroll">
+            
+              <div class="card news-card-item news-card-item-photo">
+                <div class="card-header no-border">
+                  <div class="news-card-avatar">
+                    <img src="img/i-f7-ios.png">
+                  </div>
+                  <div class="info-wrapper">
+                    <div class="info v-centered">
+                      <span class="news-card-name">John Doe<br></span>
+                      <span class="news-card-date">Monday at 3:47 PM</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="news-card-content-repost">
+                    <div class="repost-wrapper">
+                      <div class="card-header no-border">
+                        <div class="news-card-avatar v-centered">
+                          <img src="img/i-f7-ios.png">
+                        </div>
+                        <div class="info-wrapper">
+                          <div class="info">
+                            <span class="repost-icon-wrapper">
+                              <i class="icon f7-icons">redo</i>
+                            </span>
+                            <span class="news-card-name">John Doe<br></span>
+                            <span class="news-card-date">Monday at 3:47 PM</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-content">
+                        <div class="card-content-inner">
+                          <div class="news-card-content-text">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis fugiat perspiciatis ipsa excepturi minus magni, facilis, harum deleniti, amet libero maiores autem. Quis dicta eum doloribus, consequatur modi assumenda quaerat.</span>
+                          </div>
+                        </div>
+                        <div class="news-card-content-photos photos-container mult-rows">
+                          <!-- Create a grid -->
+                          <div class="container-fluid">
+                            <!-- First row with first two photos -->
+                            <div class="row row-one">
+                              <div class="col-xs-6 photo-1">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-6 photo-2 v-centered">
+                                <img src="img/images-13.jpg" width="100%">
+                              </div>
+                            </div>
+                            <!-- Second row with next four photos -->
+                            <div class="row row-two">
+                              <div class="col-xs-2 photo-col first">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-10"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-content-inner no-padding">
+                          <div class="news-card-content-link">
+                            <div class="link-wrapper">
+                              <div class="link-icon-wrapper v-centered">
+                                <i class="icon f7-icons">arrow_up_fill</i>
+                              </div>
+                              <div class="link-info-wrapper">
+                                <span class="link-title">My Awesome App!<br></span>
+                                <span class="link-domain">myawesomeapp.com</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer no-border news-card-social-buttons">
+                  <a href="#" class="link"><i class="icon f7-icons">heart</i>400</a>
+                  <a href="#" class="link"><i class="icon f7-icons">chats</i>100</a>
+                  <a href="#" class="link"><i class="icon f7-icons">radio</i>300</a>
+                </div>
+              </div>
+              
+              <!-- List with comments -->
+              <div class="list-block cards-list news-card-content-comments">
+                <ul>
+                  
+                  <li class="card news-card-item news-card-content-comment">
+                    <div class="card-header">
+                      <div class="news-card-comment-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <div class="info v-centered">
+                          <span class="news-card-comment-name">John Doe<br></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-inner">
+                        <div class="news-card-comment-text">
+                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis fugiat perspiciatis ipsa excepturi minus magni, facilis, harum deleniti, amet libero maiores autem. Quis dicta eum doloribus, consequatur modi assumenda quaerat.</span>
+                        </div>
+                        <div class="news-card-content-photos news-card-comment-photos photos-container mult-rows">
+                          <!-- Create a grid -->
+                          <div class="container-fluid">
+                            <!-- First row with first two photos -->
+                            <div class="row row-one">
+                              <div class="col-xs-3 photo-col first">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col last">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                            </div>
+                            <!-- Second row with next four photos -->
+                            <div class="row row-two">
+                              <div class="col-xs-3 photo-col first">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col last">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-card-content-attachment">
+                          <div class="attachment-wrapper">
+                            <div class="attachment-icon-wrapper">
+                              <i class="icon f7-icons">document_fill</i>
+                            </div>
+                            <div class="attachment-info-wrapper">
+                              <span class="attachment-title">Lorem ipsum<br></span>
+                              <span class="attachment-size">8.3 MB</span>
+                              <span class="attachment-info-separator">
+                                <i class="icon f7-icons">circle_fill</i>
+                              </span>
+                              <span class="attachment-date">Oct 28, 2014</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-card-content-link">
+                          <div class="link-wrapper">
+                            <div class="link-icon-wrapper v-centered">
+                              <i class="icon f7-icons">arrow_up_fill</i>
+                            </div>
+                            <div class="link-info-wrapper">
+                              <span class="link-title">My Awesome App!<br></span>
+                              <span class="link-domain">myawesomeapp.com</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="card news-card-item news-card-content-comment">
+                    <div class="card-header">
+                      <div class="news-card-comment-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <div class="info v-centered">
+                          <span class="news-card-comment-name">John Doe<br></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-inner">
+                        <div class="news-card-comment-text">
+                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis fugiat perspiciatis ipsa excepturi minus magni, facilis, harum deleniti, amet libero maiores autem. Quis dicta eum doloribus, consequatur modi assumenda quaerat.</span>
+                        </div>
+                        <div class="news-card-content-photos news-card-comment-photos photos-container mult-rows">
+                          <!-- Create a grid -->
+                          <div class="container-fluid">
+                            <!-- First row with first two photos -->
+                            <div class="row row-one">
+                              <div class="col-xs-3 photo-col first">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col last">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                            </div>
+                            <!-- Second row with next four photos -->
+                            <div class="row row-two">
+                              <div class="col-xs-3 photo-col first">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                              <div class="col-xs-3 photo-col last">
+                                <img src="img/i-f7-material.png" width="100%">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="news-card-content-link">
+                          <div class="link-wrapper">
+                            <div class="link-icon-wrapper v-centered">
+                              <i class="icon f7-icons">arrow_up_fill</i>
+                            </div>
+                            <div class="link-info-wrapper">
+                              <span class="link-title">My Awesome App!<br></span>
+                              <span class="link-domain">myawesomeapp.com</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  <li class="card news-card-content-comment">
+                    <div class="card-header">
+                      <div class="news-card-comment-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <div class="info v-centered">
+                          <span class="news-card-comment-name">John Doe<br></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-inner">Card content</div>
+                    </div>
+                  </li>
+                  
+                  <li class="card news-card-content-comment">
+                    <div class="card-header">
+                      <div class="news-card-comment-avatar">
+                        <img src="img/i-f7-ios.png">
+                      </div>
+                      <div class="info-wrapper">
+                        <div class="info v-centered">
+                          <span class="news-card-comment-name">John Doe<br></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-inner">Card content</div>
+                    </div>
+                  </li>
+                  
+                </ul>
+              </div>
+                        
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>

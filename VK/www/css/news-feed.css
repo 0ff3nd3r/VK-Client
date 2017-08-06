@@ -14,6 +14,16 @@
   background-color: white;
 }
 
+.panel.panel-left .list-block li.active {
+  background: #ff3b30;
+}
+
+
+.panel.panel-left .list-block li.active i,
+.panel.panel-left .list-block li.active .item-title {
+  color: white;
+}
+
 .no-padding {
   padding: 0;
 }

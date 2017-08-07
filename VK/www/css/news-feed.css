@@ -1,13 +1,8 @@
 /*Notes:*/
 /*display: flex does not work properly*/
 
-.list-block {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-#title {
-  margin: 0 6px;
+.navbar {
+  border: none;
 }
 
 .panel.panel-left {
@@ -18,7 +13,6 @@
   background: #ff3b30;
 }
 
-
 .panel.panel-left .list-block li.active i,
 .panel.panel-left .list-block li.active .item-title {
   color: white;
@@ -28,12 +22,21 @@
   padding: 0;
 }
 
+.view .pages .list-block {
+  margin: 0;
+  padding: 0;
+}
+
 .view.not-active {
   visibility: hidden;
 }
 
 .view.active {
   visibility: visible;
+}
+
+#title {
+  margin: 0 6px;
 }
 
 /*.statusbar-overlay {

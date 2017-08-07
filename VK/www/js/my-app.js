@@ -23,9 +23,11 @@ var mainView = myApp.addView('.view-main', {
 // });
 
 // mainView.loadPage("inde")
+
 var messagesSearchbar = myApp.searchbar('.searchbar', {
   overlay: ".searchbar-overlay",
 });
+
 $(".searchbar-clear").on('click', function () {
   $(".searchbar-input input").val('');
 });
@@ -45,7 +47,10 @@ $(".searchbar-clear").on('click', function () {
 //     });
 // });
 
+fullHeight();
 centerElements();
+// bottom();
+// fullHeight();
 // resizeFirstRow();
 // fitWidth();
 
@@ -83,20 +88,60 @@ function centerElements() {
   var elements = $('.v-centered');
   for (var i = 0; i < elements.length; i++) {
     var element = $(elements[i]);
-    var parentHeight = element.parent().innerHeight();
+    // var parentHeight = element.parent().innerHeight();
+    var parentHeight = getAbsoluteInnerHeight(element);
     element.css('margin-top', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
     element.css('margin-bottom', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
   }
   
-  // elements = $('.h-centered');
-  // for (var i = 0; i < elements.length; i++) {
-  //   var element = $(elements[i]);
-  //   var parentWidth = element.parent().innerWidth();
-  //   element.css('margin-left', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
-  //   element.css('margin-right', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
-  // }
+  elements = $('.h-centered');
+  for (var i = 0; i < elements.length; i++) {
+    var element = $(elements[i]);
+    var parentWidth = element.parent().innerWidth();
+    element.css('margin-left', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
+    element.css('margin-right', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
+  }
   
   return;
+}
+
+// Returns the inner height of the parent element of @param element
+function getAbsoluteInnerHeight(element) {
+  element = $(element);
+  var parent = element.parent();
+  return parent.innerHeight() - (
+           parseInt( parent.css('padding-top') ) + parseInt( parent.css('padding-bottom') )
+         );
+}
+
+function fullHeight() {
+  var elements = $('.full-height');
+  for (var i = 0; i < elements.length; i++) {
+    var element = $(elements[i]);
+    var parent = element.parent();
+    element.height(getAbsoluteInnerHeight(element));
+  }
+}
+
+// Applicable only to last elements
+function bottom() {
+  var elements = $('.bottom');
+  for (var i = 0; i < elements.length; i++) {
+    var element = $(elements[i]);
+    var parent = element.parent();
+    var siblings = element.siblings();
+    var sibHeights = 0;
+    // Find outer heights of all siblings
+    if (siblings.length > 0) {
+      for (var i = 0; i < siblings.length; i++) {
+        sibHeights += $(siblings[i]).outerHeight();
+      }
+    }
+    
+    element.css('margin-top',
+      getAbsoluteInnerHeight(parent) - sibHeights - element.outerHeight()
+    );
+  }
 }
 
 // Finds first rows with 1-2 cards and resizes the photos so that they have equal 

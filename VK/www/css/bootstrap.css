@@ -281,6 +281,7 @@ th {
 .glyphicon-asterisk:before {
   content: "\002a";
 }
+
 .glyphicon-plus:before {
   content: "\002b";
 }

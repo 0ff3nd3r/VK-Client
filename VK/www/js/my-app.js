@@ -9,7 +9,8 @@ var $$ = Dom7;
 // Add main view. News tab
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
+    dynamicNavbar: true,
+    fastClicks: true
 });
 
 // mainView.loadPage("views/News/page-news-feed-news_release.html");
@@ -48,11 +49,10 @@ $(".searchbar-clear").on('click', function () {
 // });
 
 fullHeight();
+updateWidthFromData();
 centerElements();
 // bottom();
 // fullHeight();
-// resizeFirstRow();
-// fitWidth();
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
@@ -89,28 +89,39 @@ function centerElements() {
   for (var i = 0; i < elements.length; i++) {
     var element = $(elements[i]);
     // var parentHeight = element.parent().innerHeight();
-    var parentHeight = getAbsoluteInnerHeight(element);
-    element.css('margin-top', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
-    element.css('margin-bottom', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
+    var parentHeight = getAbsoluteHeight(element);
+    var margin = (parentHeight - element.outerHeight()) / 2;
+    element.css('margin-top', '' + margin + 'px');
+    element.css('margin-bottom', '' + margin + 'px');
   }
   
   elements = $('.h-centered');
   for (var i = 0; i < elements.length; i++) {
     var element = $(elements[i]);
-    var parentWidth = element.parent().innerWidth();
-    element.css('margin-left', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
-    element.css('margin-right', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
+    var parentWidth = getAbsoluteWidth(element);
+    var margin = (parentWidth - element.outerWidth()) / 2;
+    element.css('margin-left', '' + margin + 'px');
+    element.css('margin-right', '' + margin + 'px');
   }
   
   return;
 }
 
 // Returns the inner height of the parent element of @param element
-function getAbsoluteInnerHeight(element) {
+function getAbsoluteHeight(element) {
   element = $(element);
   var parent = element.parent();
   return parent.innerHeight() - (
            parseInt( parent.css('padding-top') ) + parseInt( parent.css('padding-bottom') )
+         );
+}
+
+// Returns the inner width of the parent element of @param element
+function getAbsoluteWidth(element) {
+  element = $(element);
+  var parent = element.parent();
+  return parent.innerWidth() - (
+           parseInt( parent.css('padding-left') ) + parseInt( parent.css('padding-right') )
          );
 }
 
@@ -119,8 +130,14 @@ function fullHeight() {
   for (var i = 0; i < elements.length; i++) {
     var element = $(elements[i]);
     var parent = element.parent();
-    element.height(getAbsoluteInnerHeight(element));
+    element.height(getAbsoluteHeight(element));
   }
+}
+
+function updateWidthFromData() {
+  $('*[data-width]').css('width', function (index, value) {
+    return $(this).data('width');
+  });
 }
 
 // Applicable only to last elements
@@ -139,7 +156,7 @@ function bottom() {
     }
     
     element.css('margin-top',
-      getAbsoluteInnerHeight(parent) - sibHeights - element.outerHeight()
+      getAbsoluteHeight(parent) - sibHeights - element.outerHeight()
     );
   }
 }

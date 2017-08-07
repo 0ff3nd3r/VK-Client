@@ -9,7 +9,8 @@ var $$ = Dom7;
 // Add main view. News tab
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
+    dynamicNavbar: true,
+    fastClicks: true
 });
 
 // mainView.loadPage("views/News/page-news-feed-news_release.html");
@@ -23,9 +24,11 @@ var mainView = myApp.addView('.view-main', {
 // });
 
 // mainView.loadPage("inde")
+
 var messagesSearchbar = myApp.searchbar('.searchbar', {
   overlay: ".searchbar-overlay",
 });
+
 $(".searchbar-clear").on('click', function () {
   $(".searchbar-input input").val('');
 });
@@ -45,9 +48,11 @@ $(".searchbar-clear").on('click', function () {
 //     });
 // });
 
+fullHeight();
+updateWidthFromData();
 centerElements();
-// resizeFirstRow();
-// fitWidth();
+// bottom();
+// fullHeight();
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
@@ -83,20 +88,77 @@ function centerElements() {
   var elements = $('.v-centered');
   for (var i = 0; i < elements.length; i++) {
     var element = $(elements[i]);
-    var parentHeight = element.parent().innerHeight();
-    element.css('margin-top', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
-    element.css('margin-bottom', '' + (parentHeight - element.outerHeight()) / 2 + 'px');
+    // var parentHeight = element.parent().innerHeight();
+    var parentHeight = getAbsoluteHeight(element);
+    var margin = (parentHeight - element.outerHeight()) / 2;
+    element.css('margin-top', '' + margin + 'px');
+    element.css('margin-bottom', '' + margin + 'px');
   }
   
-  // elements = $('.h-centered');
-  // for (var i = 0; i < elements.length; i++) {
-  //   var element = $(elements[i]);
-  //   var parentWidth = element.parent().innerWidth();
-  //   element.css('margin-left', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
-  //   element.css('margin-right', '' + (parentWidth - element.outerWidth()) / 2 + 'px');
-  // }
+  elements = $('.h-centered');
+  for (var i = 0; i < elements.length; i++) {
+    var element = $(elements[i]);
+    var parentWidth = getAbsoluteWidth(element);
+    var margin = (parentWidth - element.outerWidth()) / 2;
+    element.css('margin-left', '' + margin + 'px');
+    element.css('margin-right', '' + margin + 'px');
+  }
   
   return;
+}
+
+// Returns the inner height of the parent element of @param element
+function getAbsoluteHeight(element) {
+  element = $(element);
+  var parent = element.parent();
+  return parent.innerHeight() - (
+           parseInt( parent.css('padding-top') ) + parseInt( parent.css('padding-bottom') )
+         );
+}
+
+// Returns the inner width of the parent element of @param element
+function getAbsoluteWidth(element) {
+  element = $(element);
+  var parent = element.parent();
+  return parent.innerWidth() - (
+           parseInt( parent.css('padding-left') ) + parseInt( parent.css('padding-right') )
+         );
+}
+
+function fullHeight() {
+  var elements = $('.full-height');
+  for (var i = 0; i < elements.length; i++) {
+    var element = $(elements[i]);
+    var parent = element.parent();
+    element.height(getAbsoluteHeight(element));
+  }
+}
+
+function updateWidthFromData() {
+  $('*[data-width]').css('width', function (index, value) {
+    return $(this).data('width');
+  });
+}
+
+// Applicable only to last elements
+function bottom() {
+  var elements = $('.bottom');
+  for (var i = 0; i < elements.length; i++) {
+    var element = $(elements[i]);
+    var parent = element.parent();
+    var siblings = element.siblings();
+    var sibHeights = 0;
+    // Find outer heights of all siblings
+    if (siblings.length > 0) {
+      for (var i = 0; i < siblings.length; i++) {
+        sibHeights += $(siblings[i]).outerHeight();
+      }
+    }
+    
+    element.css('margin-top',
+      getAbsoluteHeight(parent) - sibHeights - element.outerHeight()
+    );
+  }
 }
 
 // Finds first rows with 1-2 cards and resizes the photos so that they have equal 

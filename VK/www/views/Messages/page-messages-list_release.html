@@ -1,0 +1,942 @@
+<!-- Navbar -->
+<div class="navbar">
+  <div class="navbar-inner no-padding">
+    <div class="left">
+     <!-- Left panel bars icon -->
+      <a href="#" data-panel="left" class="link icon-only open-panel">
+        <i class="icon f7-icons">bars</i>
+      </a>
+    </div>
+    <!-- Current page title -->
+    <div class="center sliding">
+      <span id="title">Messages</span>
+    </div>
+    <!-- Search icon -->
+    <div class="right">
+      <a href="#" class="link icon-only">
+        <i class="icon f7-icons">compose</i>
+      </a>
+    </div>
+  </div>
+   <div class="subnavbar">
+      <!-- Search bar -->
+      <form class="searchbar">
+        <div class="searchbar-input">
+          <input type="search" placeholder="Search">
+          <a href="#" class="searchbar-clear"></a>
+        </div>
+        <a href="#" class="searchbar-cancel">Cancel</a>
+      </form>
+      <!-- Search Bar overlay-->
+      <div class="searchbar-overlay"></div>
+    </div>
+</div>
+
+<!-- Page -->
+<div data-page="messages" class="page with-subnavbar">
+
+  <!-- Scrollable page content-->
+  <div class="page-content messages pull-to-refresh-content hide-bars-on-scroll">
+    
+    <!-- Default pull to refresh layer-->
+    <div class="pull-to-refresh-layer">
+      <div class="preloader"></div>
+      <div class="pull-to-refresh-arrow"></div>
+    </div>
+            
+    <div class="list-block dialog-previews-list">
+      <ul>
+      
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview not-read">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview group-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <i class="fa fa-users"></i>
+                          <span>Johns Does Con...</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="83%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper not-read v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consecte...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>
+        
+        <a href="#" class="dialog-preview-wrapper">
+          <li class="dialog-preview">
+            <div class="container-fluid">
+              <div class="row">
+                <div data-width="20%" class="col-xs-3 no-padding v-centered">
+                  <div class="preview-avatar-wrapper">
+                    <img class="v-centered h-centered" src="img/i-f7-ios.png">
+                  </div>
+                </div>
+                <div data-width="80%" class="col-xs-9 no-padding full-height">
+                  <div class="container-fluid full-height">
+                    <div class="row row-preview-dialog-info">
+                      <div class="col-xs-7 no-padding v-centered">
+                        <div class="preview-name-wrapper">
+                          <span>John Doe</span>
+                        </div>
+                      </div>
+                      <div class="col-xs-5 v-centered">
+                        <div class="preview-date-wrapper bottom">
+                          <span>Jul 30, 2017</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row bottom">
+                      <div class="col-xs-12 no-padding">
+                        <div class="preview-last-message">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div data-width="12%" class="col-xs-2 no-padding full-height">
+                                <div class="avatar-wrapper v-centered">
+                                  <img src="img/i-f7-ios.png">
+                                </div>
+                              </div>
+                              <div data-width="88%" class="col-xs-10 no-padding full-height">
+                                <div class="message-wrapper v-centered">
+                                  <span>
+                                    Lorem ipsum dolor sit amet, consectetur...
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </a>                  
+      </ul>
+    </div>
+    
+    <div class="dialogs-number-wrapper">
+      <span class="h-centered">15 conversations</span>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>VK</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../../css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="../../css/framework7-icons.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <!-- Path to custom app styles-->
+    <link rel="stylesheet" href="../../css/news-feed.css">
+    <link rel="stylesheet" href="../../css/news-feed-full-post.css">
+    <link rel="stylesheet" href="../../css/messages.css">
+    <link rel="stylesheet" href="../../css/dialog.css">
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../../js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  </head>
+  <!-- <body class="layout-dark theme-red"> -->
+  <body class="theme-red">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+    <!-- List of tabs -->
+     <div class="list-block">
+      <ul>
+        <!-- Search bar -->
+        <!-- <li>
+          <div class="page">
+            <form action="" class="searchbar">
+              <div class="searchbar-input">
+                <input type="search" placeholder="Search">
+                <a href="#" class="searchbar-clear"></a>
+              </div>
+              <a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+          </div>
+        </li> -->
+        <!-- Profile -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">person</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Profile</div>
+            </div>
+          </div>
+        </li>
+        <!-- News -->
+        <li class="active">
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">home</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">News</div>
+            </div>
+          </div>
+        </li>
+        <!-- Messages -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">chat</i> <!-- email -->
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Messages</div>
+            </div>
+          </div>
+        </li>
+        <!-- Friends -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">persons</i> <!-- persons_fill -->
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Friends</div>
+            </div>
+          </div>
+        </li>
+        <!-- Communities -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">world</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Communities</div>
+            </div>
+          </div>
+        </li>
+        <!-- Photos -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">images</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Photos</div>
+            </div>
+          </div>
+        </li>
+        <!-- Videos -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">film</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Videos</div>
+            </div>
+          </div>
+        </li>
+        <!-- Music -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">tune</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Music</div>
+            </div>
+          </div>
+        </li>
+        <!-- Bookmarks -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">heart</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Bookmarks</div>
+            </div>
+          </div>
+        </li>
+        <!-- Settings -->
+        <li>
+          <div class="item-content">
+          
+            <div class="item-media">
+              <i class="icon f7-icons">settings</i>
+            </div>
+          
+            <div class="item-inner"> 
+              <div class="item-title">Settings</div>
+            </div>
+          </div>
+        </li>
+      </ul>        
+     </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <!-- Classes: active, not-active -->
+      <!-- <div class="view view-main view-news-feed"> -->
+      <div class="view view-main view-dialog">
+
+      
+        <!-- Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner no-padding">
+            <div class="left">
+             <!-- Left panel bars icon -->
+              <a href="#" data-panel="left" class="link icon-only open-panel">
+                <i class="icon f7-icons">chevron_left</i>
+              </a>
+            </div>
+            <!-- Current page title -->
+            <div class="center sliding full-height">
+              <div class="title full-height">
+                <div class="name-wrapper">
+                  <span>John Doe</span>
+                </div>
+                <div class="last-seen-wrapper">
+                  <span>last seen Jul 28 at 4:51 pm</span>
+                   <!-- or "online" -->
+                </div>
+              </div>              
+            </div>
+            <!-- Dialog avatar wrapper -->
+            <div class="right">
+              <a href="#" class="link icon-only">
+                <div class="avatar"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pages navbar-fixed toolbar-fixed">
+        
+          <!-- Page -->
+          <div data-page="dialog" class="page">
+            
+            <div class="toolbar messagebar">
+              <div class="toolbar-inner">
+                <textarea placeholder="Write a Message" class=""></textarea><a href="#" class="link">Send</a>
+              </div>
+            </div>
+            
+            <!-- Scrollable page content-->
+            <div class="page-content messages-content">
+            
+              <div class="messages">
+              
+                <!-- Template -->
+                <!-- <div class="message-wrapper">
+                  <div class="message message-sent">
+                    <div class="message-text">
+                      <div class="text-wrapper"></div>
+                      <div class="images-wrapper"></div>
+                      <div class="videos-wrapper"></div>
+                      <div class="music-wrapper"></div>
+                      <div class="attachments-wrapper"></div>
+                      <div class="links-wrapper"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                
+                <!-- Block of messages from specific date -->
+                <div class="messages-date">Sunday, Feb 9</div>
+                <div class="message-wrapper">
+                  <div class="message message-sent">
+                    <div class="message-text">
+                      <div class="text-wrapper">
+                        Hello
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-wrapper">
+                  <div class="message message-sent">
+                    <div class="message-text">
+                      <div class="text-wrapper">
+                        How are you?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-wrapper">
+                  <div class="message message-received">
+                    <div class="message-text">
+                      <div class="text-wrapper">
+                        I am fine, thanks
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-wrapper">
+                  <div style="width: 100%" class="message message-sent">
+                    <div class="message-text">
+                      <div class="attachments-wrapper">
+                        <div class="attachment">
+                          <div class="attachment-icon-wrapper"></div>
+                          <div class="attachment-info-wrapper">
+                            <span class="attachment-title">Lorem ipsum<br></span>
+                            <span class="attachment-extension">DOCX</span>
+                            <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                            <span class="attachment-size">8.3 MB</span>
+                            <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                            <span class="attachment-date">Oct 28, 2014</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="music-wrapper">
+                        <div class="song">
+                          <div class="song-icon-wrapper v-centered"></div>
+                          <div class="song-info-wrapper v-centered">
+                            <span class="song-artist">Mettalica<br></span>
+                            <span class="song-title">Fight Fire with Fire</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="links-wrapper">
+                        <div class="link">
+                          <div class="link-icon-wrapper"></div>
+                          <div class="link-info-wrapper">
+                            <span class="link-title">My awesome app!<br></span>
+                            <span class="link-domain">myawesomeapp.com</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="messages-date">Sunday, Feb 3</div>
+                <div class="message-wrapper">
+                  <div class="message message-sent">
+                    <div class="message-text">
+                      <div class="text-wrapper">
+                        Nice photo?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-wrapper">
+                  <div style="width: 100%" class="message message-sent">
+                    <div class="message-text">
+                      <div class="text-wrapper">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde deserunt suscipit nemo.
+                      </div>
+                      <div class="images-wrapper">
+                        <div class="image">
+                          <img src="http://lorempixel.com/300/300/">
+                        </div>
+                        <div class="image">
+                          <img src="http://lorempixel.com/300/300/">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-wrapper">
+                  <div style="width: 100%" class="message message-sent">
+                    <div class="message-text">
+                      <div class="attachments-wrapper">
+                        <div class="attachment">
+                          <div class="attachment-icon-wrapper"></div>
+                          <div class="attachment-info-wrapper">
+                            <span class="attachment-title">Lorem ipsum<br></span>
+                            <span class="attachment-extension">DOCX</span>
+                            <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                            <span class="attachment-size">8.3 MB</span>
+                            <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                            <span class="attachment-date">Oct 28, 2014</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-wrapper">
+                  <div style="width: 100%" class="message message-sent">
+                    <div class="message-text">
+                      <div class="wall-posts-wrapper">
+                        <div class="wall-post">
+                          <div class="wall-post-icon-wrapper"></div>
+                          <div class="wall-post-info-wrapper">
+                            <span class="wall-post-title">Manual how to do...<br></span>
+                            <span class="wall-post-type">Wall Post</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="attachments-wrapper">
+                        <div class="attachment">
+                          <div class="attachment-icon-wrapper"></div>
+                          <div class="attachment-info-wrapper">
+                            <span class="attachment-title">Lorem ipsum<br></span>
+                            <span class="attachment-extension">DOCX</span>
+                            <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                            <span class="attachment-size">8.3 MB</span>
+                            <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                            <span class="attachment-date">Oct 28, 2014</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-wrapper">
+                  <div class="message message-received message-last">
+                    <div class="message-text">
+                      <div class="text-wrapper">
+                        Wow, awesome!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../../js/framework7.js"></script>
+    <script type="text/javascript" src="../../js/dialog.js"></script>
+  </body>
+</html>

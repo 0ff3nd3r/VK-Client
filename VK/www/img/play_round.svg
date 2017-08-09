@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50px"
+   height="50px"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg858"
+   sodipodi:docname="play_round.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata862">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>play_round</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="877"
+     id="namedview860"
+     showgrid="false"
+     inkscape:zoom="4.72"
+     inkscape:cx="29.872881"
+     inkscape:cy="25"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg858" />
+  <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title848">play_round</title>
+  <desc
+     id="desc850">Created with Sketch.</desc>
+  <defs
+     id="defs852" />
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd">
+    <g
+       id="play_round"
+       fill="#ff3b30">
+      <path
+         d="M48,25 C48,12.2974508 37.7025492,2 25,2 C12.2974508,2 2,12.2974508 2,25 C2,37.7025492 12.2974508,48 25,48 C37.7025492,48 48,37.7025492 48,25 Z M0,25 C0,11.1928813 11.1928813,0 25,0 C38.8071187,0 50,11.1928813 50,25 C50,38.8071187 38.8071187,50 25,50 C11.1928813,50 0,38.8071187 0,25 Z"
+         id="Oval-30" />
+      <path
+         d="M20.4837974,34.8961229 C18.5597492,35.9838944 17,35.0701633 17,32.8736052 L17,17.4807244 C17,15.2759471 18.5539606,14.3671625 20.4837974,15.4582067 L34.1908744,23.2075802 C36.1149226,24.2953517 36.1207112,26.0557052 34.1908744,27.1467494 L20.4837974,34.8961229 Z"
+         id="Triangle-5" />
+    </g>
+  </g>
+</svg>

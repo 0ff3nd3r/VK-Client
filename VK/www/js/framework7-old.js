@@ -6374,7 +6374,7 @@ return t7;
             
             // ignore close popover
             if (isPopover && !removeOnClose && modal.hasClass('ignore-close-by-outside')) {
-          return;
+        	return;
             }
         
             // For Actions
@@ -7270,21 +7270,18 @@ return t7;
                 m.container.find('.message').each(function () {
                     var message = $(this);
                     var isSent = message.hasClass('message-sent');
-                    // Message is wrapped in div, so next is the child of the next wrapper of parent
-                    var next = message.parent().next().find('.message.message-' + (isSent ? 'sent' : 'received'));
-                    var prev = message.parent().prev().find('.message.message-' + (isSent ? 'sent' : 'received'));
+                    var next = message.next('.message-' + (isSent ? 'sent' : 'received'));
+                    var prev = message.prev('.message-' + (isSent ? 'sent' : 'received'));
                     if (next.length === 0) {
                         message.addClass('message-last message-with-tail');
                     }
-                    // else message.removeClass('message-last'); If tails needed on all messages
                     else message.removeClass('message-last message-with-tail');
         
                     if (prev.length === 0) {
                         message.addClass('message-first');
                     }
                     else message.removeClass('message-first');
-                    
-                    // Check from_id instead of names
+        
                     if (prev.length > 0 && prev.find('.message-name').length > 0 && message.find('.message-name').length > 0) {
                         if (prev.find('.message-name').text() !== message.find('.message-name').text()) {
                             prev.addClass('message-last message-with-tail');
@@ -8005,11 +8002,11 @@ return t7;
                     if (select[i].selected) {
                         displayAs = select[i].dataset ? select[i].dataset.displayAs : $(select[i]).data('display-as');
                         if (displayAs && typeof displayAs !== 'undefined') {
-                  valueText.push(displayAs);
-                } else {
-                  valueText.push(select[i].textContent.trim());
-                }
-              }
+        					valueText.push(displayAs);
+        				} else {
+        					valueText.push(select[i].textContent.trim());
+        				}
+        			}
                 }
         
                 var itemAfter = smartSelect.find('.item-after');
@@ -8032,12 +8029,12 @@ return t7;
                     for (var i = 0; i < select.length; i++) {
                         if (select[i].selected) {
                             var displayAs = select[i].dataset ? select[i].dataset.displayAs : $(select[i]).data('display-as');
-                          if (displayAs && typeof displayAs !== 'undefined') {
-                    valueText.push(displayAs);
-                  } else {
-                    valueText.push(select[i].textContent.trim());
-                  }
-                }
+                        	if (displayAs && typeof displayAs !== 'undefined') {
+        						valueText.push(displayAs);
+        					} else {
+        						valueText.push(select[i].textContent.trim());
+        					}
+        				}
                     }
                     smartSelect.find('.item-after').text(valueText.join(', '));
                 });
@@ -8400,7 +8397,7 @@ return t7;
                     });
                 }
                 container.on('change', 'input[name="' + inputName + '"]', function () {
-              var option, text;
+        			var option, text;
                     var input = this;
                     var value = input.value;
                     var optionText = [];
@@ -10007,10 +10004,10 @@ return t7;
                     if (app.params.tapHold) {
                         clearTimeout(tapHoldTimeout);
                     }
-              if (app.params.activeState) {
-                clearTimeout(activeTimeout);
-                removeActive();
-              }
+        			if (app.params.activeState) {
+        				clearTimeout(activeTimeout);
+        				removeActive();
+        			}
                     if (app.params.material && app.params.materialRipple) {
                         rippleTouchMove();
                     }

@@ -1,0 +1,216 @@
+<!-- Navbar -->
+<div class="navbar">
+  <div class="navbar-inner no-padding">
+    <div class="left">
+     <!-- Left panel bars icon -->
+      <a href="#" data-panel="left" class="link icon-only open-panel">
+        <i class="icon f7-icons">chevron_left</i>
+      </a>
+    </div>
+    <!-- Current page title -->
+    <div class="center sliding full-height">
+      <div class="title full-height">
+        <div class="name-wrapper">
+          <span>John Doe</span>
+        </div>
+        <div class="last-seen-wrapper">
+          <span>last seen Jul 28 at 4:51 pm</span>
+           <!-- or "online" -->
+        </div>
+      </div>              
+    </div>
+    <!-- Dialog avatar wrapper -->
+    <div class="right">
+      <a href="#" class="link icon-only">
+        <div class="avatar"></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Check if it works. Otherwise change to navbar-fixed toolbar-fixed on pageInit -->
+<div class="pages navbar-fixed toolbar-fixed">
+
+  <!-- Page -->
+  <div data-page="dialog" class="page">
+    
+    <div class="toolbar messagebar">
+      <div class="toolbar-inner">
+        <textarea placeholder="Write a Message" class=""></textarea><a href="#" class="link">Send</a>
+      </div>
+    </div>
+    
+    <!-- Scrollable page content-->
+    <div class="page-content messages-content">
+    
+      <div class="messages">
+      
+        <!-- Template -->
+        <!-- <div class="message-wrapper">
+          <div class="message message-sent">
+            <div class="message-text">
+              <div class="text-wrapper"></div>
+              <div class="images-wrapper"></div>
+              <div class="videos-wrapper"></div>
+              <div class="music-wrapper"></div>
+              <div class="attachments-wrapper"></div>
+              <div class="links-wrapper"></div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        
+        <!-- Block of messages from specific date -->
+        <div class="messages-date">Sunday, Feb 9</div>
+        <div class="message-wrapper">
+          <div class="message message-sent">
+            <div class="message-text">
+              <div class="text-wrapper">
+                Hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-wrapper">
+          <div class="message message-sent">
+            <div class="message-text">
+              <div class="text-wrapper">
+                How are you?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-wrapper">
+          <div class="message message-received">
+            <div class="message-text">
+              <div class="text-wrapper">
+                I am fine, thanks
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-wrapper">
+          <div style="width: 100%" class="message message-sent">
+            <div class="message-text">
+              <div class="attachments-wrapper">
+                <div class="attachment">
+                  <div class="attachment-icon-wrapper"></div>
+                  <div class="attachment-info-wrapper">
+                    <span class="attachment-title">Lorem ipsum<br></span>
+                    <span class="attachment-extension">DOCX</span>
+                    <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                    <span class="attachment-size">8.3 MB</span>
+                    <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                    <span class="attachment-date">Oct 28, 2014</span>
+                  </div>
+                </div>
+              </div>
+              <div class="music-wrapper">
+                <div class="song">
+                  <div class="song-icon-wrapper v-centered"></div>
+                  <div class="song-info-wrapper v-centered">
+                    <span class="song-artist">Mettalica<br></span>
+                    <span class="song-title">Fight Fire with Fire</span>
+                  </div>
+                </div>
+              </div>
+              <div class="links-wrapper">
+                <div class="link">
+                  <div class="link-icon-wrapper"></div>
+                  <div class="link-info-wrapper">
+                    <span class="link-title">My awesome app!<br></span>
+                    <span class="link-domain">myawesomeapp.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="messages-date">Sunday, Feb 3</div>
+        <div class="message-wrapper">
+          <div class="message message-sent">
+            <div class="message-text">
+              <div class="text-wrapper">
+                Nice photo?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-wrapper">
+          <div style="width: 100%" class="message message-sent">
+            <div class="message-text">
+              <div class="text-wrapper">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde deserunt suscipit nemo.
+              </div>
+              <div class="images-wrapper">
+                <div class="image">
+                  <img src="http://lorempixel.com/300/300/">
+                </div>
+                <div class="image">
+                  <img src="http://lorempixel.com/300/300/">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-wrapper">
+          <div style="width: 100%" class="message message-sent">
+            <div class="message-text">
+              <div class="attachments-wrapper">
+                <div class="attachment">
+                  <div class="attachment-icon-wrapper"></div>
+                  <div class="attachment-info-wrapper">
+                    <span class="attachment-title">Lorem ipsum<br></span>
+                    <span class="attachment-extension">DOCX</span>
+                    <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                    <span class="attachment-size">8.3 MB</span>
+                    <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                    <span class="attachment-date">Oct 28, 2014</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-wrapper">
+          <div style="width: 100%" class="message message-sent">
+            <div class="message-text">
+              <div class="wall-posts-wrapper">
+                <div class="wall-post">
+                  <div class="wall-post-icon-wrapper"></div>
+                  <div class="wall-post-info-wrapper">
+                    <span class="wall-post-title">Manual how to do...<br></span>
+                    <span class="wall-post-type">Wall Post</span>
+                  </div>
+                </div>
+              </div>
+              <div class="attachments-wrapper">
+                <div class="attachment">
+                  <div class="attachment-icon-wrapper"></div>
+                  <div class="attachment-info-wrapper">
+                    <span class="attachment-title">Lorem ipsum<br></span>
+                    <span class="attachment-extension">DOCX</span>
+                    <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                    <span class="attachment-size">8.3 MB</span>
+                    <i class="icon f7-icons attachment-info-separator">circle_fill</i>
+                    <span class="attachment-date">Oct 28, 2014</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-wrapper">
+          <div class="message message-received message-last">
+            <div class="message-text">
+              <div class="text-wrapper">
+                Wow, awesome!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

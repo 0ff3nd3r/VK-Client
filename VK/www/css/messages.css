@@ -49,6 +49,10 @@
   font-weight: 600;
 }
 
+.dialog-preview .preview-name-wrapper span.online {
+  color: #ff3b30;
+}
+
 .dialog-preview .preview-date-wrapper {
   float: right;  
 }

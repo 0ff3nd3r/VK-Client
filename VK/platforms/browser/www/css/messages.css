@@ -49,6 +49,10 @@
   font-weight: 600;
 }
 
+.dialog-preview .preview-name-wrapper span.online {
+  color: #ff3b30;
+}
+
 .dialog-preview .preview-date-wrapper {
   float: right;  
 }
@@ -92,6 +96,10 @@
 .messages .dialogs-number-wrapper {
   color: #38383a;
   padding: 15px 0;
+}
+
+.messages .list-block.dialog-preview-list {
+  margin-top: 44px;
 }
 
 .preloader {

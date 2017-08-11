@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50px"
+   height="50px"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg19"
+   sodipodi:docname="document_round.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata23">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>circle_fill</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="877"
+     id="namedview21"
+     showgrid="false"
+     inkscape:zoom="7.26"
+     inkscape:cx="23.896552"
+     inkscape:cy="25"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg19" />
+  <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title10">circle_fill</title>
+  <desc
+     id="desc12">Created with Sketch.</desc>
+  <defs
+     id="defs14" />
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     style="opacity:1;fill:#ff3b30;fill-opacity:1">
+    <g
+       id="circle_fill"
+       fill="#000000"
+       style="fill:#ff3b30;fill-opacity:1">
+      <circle
+         id="Oval-50"
+         cx="25"
+         cy="25"
+         r="25"
+         style="fill:#ff3b30;fill-opacity:1" />
+    </g>
+  </g>
+  <g
+     id="Page-1-2"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1"
+     transform="matrix(0.71196755,0,0,0.71196755,13.574505,8.6247463)">
+    <g
+       id="document_fill"
+       style="fill:#ffffff">
+      <path
+         id="Combined-Shape"
+         d="M 34,17.018437 V 46 H 0 V 0 L 16,0.01772157 V 18 h 1 17 z M 33.963188,16 18.010458,0.01994835 18,0.01993677 V 16 Z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+/*.view-friends .contacts-block .list-group-title {
+  top: 93px;
+}*/
+
+.view-friends .navbar .center .change-page-icon-wrapper,
+.view-friends .navbar .center .change-page-icon-wrapper.active {
+  background-size: 100%;
+  height: 14px;
+  width: 14px;
+  /*float: left;*/
+}
+
+.view-friends .navbar .center .title {
+  display: flex;
+}
+
+.view-friends .navbar .center .title .item-title span {
+  display: block;
+  line-height: auto;
+}
+
+.view-friends .navbar .center .change-page-icon-wrapper {
+  margin-left: 3px; 
+  background-image: url(../img/chevron_down.svg);
+}
+
+.view-friends .navbar .center .change-page-icon-wrapper.active {
+  background-image: url(../img/chevron_up.svg);
+}

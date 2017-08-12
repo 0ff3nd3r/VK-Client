@@ -1,13 +1,43 @@
-/*.view-friends .contacts-block .list-group-title {
-  top: 93px;
-}*/
+.view-friends .list-block .item-inner {
+  justify-content: flex-start;
+}
 
+.view-friends .list-block .item-title {
+  font-weight: 500;
+  margin-left: 6.75px;
+}
+
+.view-friends .list-block .item-title span {
+  font-weight: 600;
+}
+
+.view-friends .list-group {
+  margin-bottom: 0;
+}
+
+.view-friends .list-group .avatar-wrapper {
+  background-image: url(../img/i-f7-ios.png);
+  border-radius: 100%;
+  background-size: 100%;
+  height: 30px;
+  width: 30px;
+  float: left;
+}
+
+.view-friends .page {
+  background-color: white;
+}
+
+.view-friends .navbar.navbar-hidden~.pages .list-group-title {
+  top: -50px;
+}
+
+.view-friends .navbar .right .add-icon-wrapper,
 .view-friends .navbar .center .change-page-icon-wrapper,
 .view-friends .navbar .center .change-page-icon-wrapper.active {
   background-size: 100%;
   height: 14px;
   width: 14px;
-  /*float: left;*/
 }
 
 .view-friends .navbar .center .title {
@@ -26,4 +56,13 @@
 
 .view-friends .navbar .center .change-page-icon-wrapper.active {
   background-image: url(../img/chevron_up.svg);
+}
+
+.view-friends .page .page-content {
+  padding-top: 50px;
+}
+
+.view-friends .navbar .right .add-icon-wrapper {
+  background-image: url(../img/add.svg);
+  background-position: center;
 }

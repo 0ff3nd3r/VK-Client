@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="css/framework7-icons.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Path to custom app styles-->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/news-feed.css">
     <link rel="stylesheet" href="css/news-feed-full-post.css">
     <link rel="stylesheet" href="css/messages.css">
     <link rel="stylesheet" href="css/friends.css">
+    <link rel="stylesheet" href="css/communities.css">
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
     <script type="text/javascript" src="js/framework7.min.js"></script>
@@ -33,18 +35,6 @@
     <!-- List of tabs -->
      <div class="list-block">
       <ul>
-        <!-- Search bar -->
-        <!-- <li>
-          <div class="page">
-            <form action="" class="searchbar">
-              <div class="searchbar-input">
-                <input type="search" placeholder="Search">
-                <a href="#" class="searchbar-clear"></a>
-              </div>
-              <a href="#" class="searchbar-cancel">Cancel</a>
-            </form>
-          </div>
-        </li> -->
         <!-- Profile -->
         <li>
           <div class="item-content">
@@ -85,7 +75,7 @@
           </div>
         </li>
         <!-- Friends -->
-        <li>
+        <li id="friends">
           <div class="item-content">
           
             <div class="item-media">
@@ -182,9 +172,7 @@
     <div class="views">
       <!-- Your main view, should have "view-main" class-->
       <!-- Classes: active, not-active -->
-      <!-- <div class="view view-main view-news-feed"> -->
-      <div class="view view-main view-friends">
-
+      <div class="view view-main view-communities">
       
         <!-- Navbar -->
         <div class="navbar">
@@ -197,7 +185,7 @@
             </div>
             <!-- Current page title -->
             <div class="center sliding">
-              <span id="title">Friends</span>
+              <span id="title">Communities</span>
               <div class="change-page-icon-wrapper"></div>
             </div>
             <!-- Add button -->
@@ -212,10 +200,10 @@
         <div class="pages navbar-fixed toolbar-fixed">
         
           <!-- Page -->
-          <div data-page="friends" class="page">
+          <div data-page="communities" class="page">
           
             <!-- Scrollable page content-->
-            <div class="page-content contacts-content pull-to-refresh-content">
+            <div class="page-content pull-to-refresh-content">
               
               <!-- Default pull to refresh layer-->
               <div class="pull-to-refresh-layer">
@@ -234,217 +222,157 @@
               <!-- Search Bar overlay-->
               <div class="searchbar-overlay"></div>
               
-              <div class="list-block contacts-block">
-                <!-- Important sections first -->
-                <div class="list-group">
-                  <ul>
-                    <li class="list-group-title">Important</li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+              <!-- List of communities -->
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                  </ul>
-                </div>
-                
-                <div class="list-group">
-                  <ul>
-                    <li class="list-group-title">A</li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="avatar-wrapper"></div>
+                        <div class="info-wrapper">
+                          <div class="title">John Doe's community</div>
+                          <div class="type">Website</div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Aaron <span>Aaronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list-group">
-                  <ul>
-                    <li class="list-group-title">B</li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="avatar-wrapper"></div>
-                          <div class="item-title">Baron <span>Baronov</span></div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="communities-number-wrapper">
+                10 communities
               </div>
               
             </div>
@@ -458,8 +386,8 @@
             <div class="toolbar">
               <div class="toolbar-inner">
                 <div class="buttons-row">
-                  <a href="#all" class="tab-link button active">30 friends</a>
-                  <a href="#online" class="tab-link button">2 online</a>
+                  <a href="#all" class="tab-link button active">11 communities</a>
+                  <a href="#online" class="tab-link button">no events</a>
                 </div>
               </div>
             </div>

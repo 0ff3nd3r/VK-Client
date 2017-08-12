@@ -1,0 +1,61 @@
+.navbar .right .add-icon-wrapper,
+.navbar .center .change-page-icon-wrapper,
+.navbar .center .change-page-icon-wrapper.active {
+  background-size: 100%;
+  height: 14px;
+  width: 14px;
+}
+
+.navbar .center .change-page-icon-wrapper {
+  margin-left: 3px; 
+  background-image: url(../img/chevron_down.svg);
+}
+
+.navbar .center .change-page-icon-wrapper.active {
+  background-image: url(../img/chevron_up.svg);
+}
+
+.navbar .right .add-icon-wrapper {
+  background-image: url(../img/add.svg);
+  background-position: center;
+}
+
+.page {
+  background-color: white;
+}
+
+.page .page-content {
+  padding-top: 50px;
+}
+
+.page .page-content .list-block li .avatar-wrapper {
+  /*Dynamically*/
+  background-image: url(../img/i-f7-ios.png);
+  border-radius: 100%;
+  background-size: 100%;
+  height: 35px;
+  width: 35px;
+  float: left;
+}
+
+.page .page-content .list-block .item-inner {
+  justify-content: flex-start;
+}
+
+.page .page-content .list-block .item-inner:after {
+  left: 10%;
+  width: 90%
+}
+
+.page .page-content .list-block .item-title {
+  font-weight: 500;
+  margin-left: 6.75px;
+}
+
+.toolbar .buttons-row {
+  width: 100%;
+}
+
+.toolbar .toolbar-inner {
+  padding: 0 15px;
+}

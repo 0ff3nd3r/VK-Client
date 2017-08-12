@@ -1,0 +1,26 @@
+.view-communities .communities-number-wrapper {
+  color: #38383a;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.view-communities .list-block .info-wrapper {
+  line-height: 16px;
+  margin-left: 9px;
+}
+
+.view-communities .list-block ul:after {
+  height: 0;
+  background-color: none;
+}
+
+.view-communities .list-block .title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.view-communities .list-block .type {
+  color: #8e8e93;
+  font-size: 13px;
+  font-weight: 500;
+}

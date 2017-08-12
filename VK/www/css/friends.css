@@ -1,5 +1,15 @@
+.view-friends a {
+  outline: none;
+  text-decoration: none;
+}
+
 .view-friends .list-block .item-inner {
   justify-content: flex-start;
+}
+
+.view-friends .list-block .item-inner:after {
+  left: 10%;
+  width: 90%
 }
 
 .view-friends .list-block .item-title {
@@ -22,10 +32,6 @@
   height: 30px;
   width: 30px;
   float: left;
-}
-
-.view-friends .page {
-  background-color: white;
 }
 
 .view-friends .navbar.navbar-hidden~.pages .list-group-title {
@@ -58,11 +64,23 @@
   background-image: url(../img/chevron_up.svg);
 }
 
+.view-friends .navbar .right .add-icon-wrapper {
+  background-image: url(../img/add.svg);
+  background-position: center;
+}
+
+.view-friends .page {
+  background-color: white;
+}
+
 .view-friends .page .page-content {
   padding-top: 50px;
 }
 
-.view-friends .navbar .right .add-icon-wrapper {
-  background-image: url(../img/add.svg);
-  background-position: center;
+.view-friends .toolbar .buttons-row {
+  width: 100%;
+}
+
+.view-friends .toolbar .toolbar-inner {
+  padding: 0 15px;
 }

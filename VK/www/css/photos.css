@@ -1,0 +1,43 @@
+.view-photos .albums-number-wrapper {
+  color: #38383a;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.view-photos .cards-list a {
+  outline: none;
+  text-decoration: none;
+}
+
+.view-photos .cards-list .card {
+  box-shadow: none;
+  border-radius: none;
+  margin: 0;
+}
+
+.view-photos .cards-list .card img {
+  max-height: 110px;
+}
+
+.view-photos .cards-list .card .info-wrapper {
+  line-height: 17px;
+}
+
+.view-photos .cards-list .card .album-title {
+  font-size: 16px;
+}
+
+.view-photos .cards-list .card .photos-number {
+  color: #8e8e93;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.view-photos .cards-list .card-header:after {
+  content: none;
+}
+
+.view-photos .swiper-container .swiper-slide {
+  margin-right: 2px;
+  width: auto;
+}
